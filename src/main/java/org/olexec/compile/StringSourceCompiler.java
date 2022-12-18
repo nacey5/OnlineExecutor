@@ -31,7 +31,7 @@ public class StringSourceCompiler {
             throw new IllegalArgumentException("No valid class");
         }
 
-        // 把源码字符串构造成JavaFileObject，供编译使用
+        // 把源码字符串构造成JavaFileObject，供编译使用---这个就是生成二进制流
         JavaFileObject sourceJavaFileObject = new TmpJavaFileObject(className, source);
 
         Boolean result = compiler.getTask(null, javaFileManager, compileCollector,
